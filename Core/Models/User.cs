@@ -17,7 +17,8 @@ namespace testTinderDogs.Core.Models
         public string Email { get; set; }
         [Phone]
         public string Phone { get; set; }
-        public string Password { get; set; }
+        public string PasswordHash { get; set; }
+        public string PasswordSalt { get; set; }
         public DateTime BirthDate { get; set; }
         public Gender Gender { get; set; }
         public bool IsAdmin { get; set; }
@@ -28,6 +29,12 @@ namespace testTinderDogs.Core.Models
 
     }
 
+    public enum Gender
+    {
+        Male,
+        Female,
+        Other
+    }
     public enum Gender
     {
         Male,
