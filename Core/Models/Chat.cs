@@ -1,14 +1,15 @@
-﻿namespace testTinderDogs
+﻿namespace testTinderDogs.Core.Models
 {
     public class Chat
     {
         public string Id { get; set; }
         public string FromDogId { get; set; }
-        public string ToDogId { get;set; }
+        public Dog FromDog { get; set; }
+        public string ToDogId { get; set; }
+        public Dog ToDog { get; set; }
+        public string LastMessegeId { get; set; }
         public Messege LastMessege { get; set; }
-        public string LastMessegeUser { get; set; }
         public bool IsActive { get; set; }
-        public DateTime DateTime { get; set; }
         public List<Messege> Messeges { get; set; }
     }
 }

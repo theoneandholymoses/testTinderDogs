@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace testTinderDogs.Controllers
+namespace testTinderDogs.Presentation.Controllers
 {
     [ApiController]
     [Route("[controller]")]
