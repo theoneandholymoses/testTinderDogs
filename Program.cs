@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using testTinderDogs.Hubs;
+using testTinderDogs.Infrastructure.Data;
 
 namespace testTinderDogs
 {
@@ -10,7 +12,10 @@ namespace testTinderDogs
 
             // Add services to the container.
             builder.Services.AddControllers();
-            builder.Services.AddSignalR();
+            builder.Services.AddDbContext<TinderDogsContext>(options => options.UseSqlServer("Server=MOSHIKO\\SQLEXPRESS;Database=TinderDogs;Trusted_Connection=True;TrustServerCertificate=True;"));
+        
+
+        builder.Services.AddSignalR();
             builder.Services.AddCors(options =>
             {
                 options.AddDefaultPolicy(policy =>

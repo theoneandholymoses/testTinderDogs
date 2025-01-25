@@ -7,8 +7,8 @@
         public string Address { get; set; }
         public decimal lon { get; set; }
         public decimal lat { get; set; }
-        public List<Dog> DogLikes { get; set; }
-        public List<Image> Images { get; set; }
+        public ICollection<Dog> DogLikes { get; set; } = new List<Dog>();
+        //public ICollection<Image> Images { get; set; } = new List<Image>();
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
     }

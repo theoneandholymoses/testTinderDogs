@@ -13,16 +13,16 @@ namespace testTinderDogs.Core.Models
         public DogSize Size { get; set; }
         public bool Geneder { get; set; }
         public DateTime Birthdate { get; set; }
-        public List<Image> Images { get; set; }
+        //public ICollection<Image> Images { get; set; }
         public string Address { get; set; }
         public decimal lon { get; set; }
         public decimal lat { get; set; }
         public bool Vaccinated { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public List<Match> Matches { get; set; }
-        public List<Park> FavParks { get; set; }
-        public List<Chat> Chats { get; set; }
+        //public ICollection<Match> Matches { get; set; } = new List<Match>();
+        public ICollection<Park> FavParks { get; set; } = new List<Park>();
+        //public ICollection<Chat> Chats { get; set; } = new List<Chat>();
     }
 
     public enum DogType

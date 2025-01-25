@@ -4,13 +4,14 @@ namespace testTinderDogs.Core.Interfaces
 {
     public interface IUserRepository
     {
-        public Task<User?> CreateUserAsync(User user);
-        public Task<User?> GetUserByIdAsync(string id);
-        public Task<List<Dog?>> GetUserAllDogsAsync(string id);
-        public Task<User?> GetUserByEmailAsync(string email);
-        public Task<List<User>> GetAllUsersAsync();
-        public Task<User?> UpdateUserAsync(string id, User user);
-        // remove all user dogs 
-        public Task<User?> DeleteUserAsync(string id);
+        public Task<User?> CreateUser(User user);
+        public Task<User?> GetUserById(string id);
+        //public Task<List<Dog?>> GetUserAllDogsAsync(string id);
+        public Task<User?> GetUserByEmail(string email);
+        public Task<List<User>> GetAllUsers();
+        public Task<User?> UpdateUser(string id, User user);
+        // remove all dogs ????
+        public Task<User?> DeleteUser(string id);
+
     }
 }
