@@ -22,7 +22,7 @@ namespace testTinderDogs.Core.Models
         public DateTime BirthDate { get; set; }
         public Gender Gender { get; set; }
         public bool IsAdmin { get; set; }
-        //public ICollection<Dog> Dogs { get; set; } = new List<Dog>();
+        public ICollection<Dog> Dogs { get; set; } = new List<Dog>();
         public string GoogleId { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
